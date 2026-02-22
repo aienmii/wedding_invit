@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+
+:root {
+  --primary-color: #2c3a29;
+  --bg-color: #ffffff;
+  --text-color: #3b4238;
+  --light-text: #777;
+  --border-color: #eaeaea;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  background-color: #f5f5f5;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Mobile phone container */
+.app-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-image: url("./assets/photo/IMG_1968.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 85vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 40px 15px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 2.8rem; 
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+.hero p {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-family: "Baselli", sans-serif;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.5s forwards; 
+}
+
+
+
+/* General Sections */
+.section {
+  padding: 40px 20px; 
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+/* Greeting Section with your custom background pattern */
+.section-greeting {
+  background-image: url("./assets/photo/image.png");
+  background-size: 600px;
+  background-position: bottom;
+  padding: 60px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-image {
+  width: 100%;
+  margin: 10px auto 20px auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+/* --- NEW: Timeline Styles --- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-time {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #da9cb9; /* Your pink theme color */
+  margin-bottom: 5px;
+}
+
+.timeline-desc {
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+/* Buttons & Links */
+.btn {
+  display: inline-block;
+  background-color: #da9cb9;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  border-radius: 25px;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+
+  background-color: #c087a1;
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 10px rgba(218, 156, 185, 0.4);
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Dress Code Color Circles */
+.color-palette {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.color-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  padding: 40px 10px;
+  background-color: #bec5a4;
+}
