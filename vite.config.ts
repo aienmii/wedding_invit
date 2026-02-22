@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: "/wedding_inv/", 
+  base: "/wedding_invit/", 
   plugins: [react()],
   
 })
