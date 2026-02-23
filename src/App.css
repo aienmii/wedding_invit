@@ -129,6 +129,7 @@ h1, h2, h3 {
   background-size: 30px,600px; ;                            
   background-position: bottom;
   padding: 70px 19px;
+  padding-top:10px; 
   border-bottom: 1px solid var(--border-color);
   background-position: right 20px top 20px   ;               ;
   background-repeat: no-repeat;
