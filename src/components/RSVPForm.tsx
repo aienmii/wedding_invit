@@ -21,8 +21,7 @@ export default function RSVPForm() {
     wishes: '' 
   });
 
-  const SCRIPT_URL: string = "https://script.google.com/macros/s/AKfycbz2Yvs7-x32xysGoVa73xqxcllYFdTzO7GeZKuC0GFwHobXsv8mdAHF16PCH8Y3u0O8cA/exec";
-
+  const SCRIPT_URL: string = "https://script.google.com/macros/s/AKfycbw9TXWRLGkDef_Tbur-5DZ0ixmwfu0wkh5CQ519nOHnE7kjtAI_Am_CCt-pkP8jNxS7XQ/exec";
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
