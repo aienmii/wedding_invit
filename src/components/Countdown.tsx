@@ -46,7 +46,8 @@ export default function Countdown() {
 
   return (
     <div className="countdown-container">
-      <h3 className="countdown-title">Чекаємо на вас через:</h3>
+      <h3 className="countdown-title">ЧЕКАЄМО НА ВАС ЧЕРЕЗ </h3>
+    
       
       <div className="countdown-wrapper">
         <div className="time-box">

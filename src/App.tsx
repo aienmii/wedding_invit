@@ -1,10 +1,36 @@
-import "./App.css";
+import React, { useEffect, useRef, useState } from "react";
+
+// Components
 import Countdown from "./components/Countdown";
 import Calendar from "./components/Calendar";
 import RSVPForm from "./components/RSVPForm";
-import './components/Countdown.css';
+
+// Assets & Styles
 import ringsPhoto from "./assets/photo/IMG_1998.jpg";
+import "./App.css";
+import "./components/Countdown.css";
+
 export default function App() {
+  const [dressCodeVisible, setDressCodeVisible] = useState(false);
+  const dressCodeRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setDressCodeVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (dressCodeRef.current) {
+      observer.observe(dressCodeRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="app-container">
       {/* Hero Section */}
@@ -25,10 +51,11 @@ export default function App() {
           Ми віримо та сподіваємося, що цей день стане гарним початком довгого
           та щасливо життя.
         </p>
-        <p>чекаємо на вас</p>
-       
+        <p>Чекаємо на вас</p>
+      </section>
 
-        {/* Your imported photo */}
+      {/* Photo Section */}
+      <section className="section images">
         <img src={ringsPhoto} alt="Wedding Rings" className="section-image" />
       </section>
 
@@ -55,14 +82,14 @@ export default function App() {
           Подивитися на мапі &raquo;
         </a>
 
+        {/* Calendar Component */}
         <Calendar />
       </section>
 
-      {/* NEW: Timing Section */}
+      {/* Timing Section */}
       <section className="section timing">
         <h2>Таймінг</h2>
         <div className="timeline">
-          
           <div className="timeline-item">
             <div className="timeline-time">12:00</div>
             <div className="timeline-desc">Збір гостей</div>
@@ -82,36 +109,22 @@ export default function App() {
             <div className="timeline-time">20:00</div>
             <div className="timeline-desc">Весільний торт</div>
           </div>
-
         </div>
       </section>
 
-      
       {/* Dress Code Section */}
-      <section className="section dress-code">
+      <section className="section dress-code" ref={dressCodeRef}>
         <h2>Дрес-код</h2>
         <p>
           Ми будемо дуже вдячні, якщо ви оберете наряди у кольорах нашого
           весілля:
         </p>
 
-        <div className="color-palette">
-          <div
-            className="color-circle"
-            style={{ backgroundColor: "#E3DAC9" }}
-          ></div>
-          <div
-            className="color-circle"
-            style={{ backgroundColor: "#B5B5A6" }}
-          ></div>
-          <div
-            className="color-circle"
-            style={{ backgroundColor: "#DA9CB9" }}
-          ></div>
-          <div
-            className="color-circle"
-            style={{ backgroundColor: "#5D6058" }}
-          ></div>
+        <div className={`color-palette ${dressCodeVisible ? "show-animation" : ""}`}>
+          <div className="color-circle" style={{ backgroundColor: "#E3DAC9" }}></div>
+          <div className="color-circle" style={{ backgroundColor: "#B5B5A6" }}></div>
+          <div className="color-circle" style={{ backgroundColor: "#8F9779" }}></div>
+          <div className="color-circle" style={{ backgroundColor: "#DA9CB9" }}></div>
         </div>
 
         <p style={{ marginTop: "20px" }}>
@@ -125,21 +138,26 @@ export default function App() {
         <p>
           Наше свято для дорослих, так як ми не передбачаємо розваги для дітей.
         </p>
+        <div className="heart-divider">🤍</div>
         <p>
           Приємним компліментом для нас буде, якщо ви замість квітів вирішите
           подарувати нам пляшку алкогольного напою для нашої колекції, яку ми
           відкриємо на найближчому нашому сімейному святі.
         </p>
+        <div className="section-images-pattern"></div>
       </section>
+
       {/* Countdown Timer Component */}
       <Countdown />
+
       {/* RSVP Form Component */}
       <RSVPForm />
 
       {/* Footer */}
       <footer className="footer">
-        <h1>З любов'ю</h1>
-        <h2>Oleksiy & Anna</h2>
+        <h1 className="footer-title">З любов'ю</h1>
+        <h2 className="footer-subtitle">Oleksiy & Anna</h2>
+        <p className="footer-subtitle">Серпень 8, 2026 • Ресторан "Венеція"</p>
         <p className="copyright">© 2026 Oleksyi & Anna. Made with love.</p>
       </footer>
     </div>
