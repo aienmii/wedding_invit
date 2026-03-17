@@ -123,7 +123,7 @@ export default function RSVPForm() {
             <div className="form-group">
               <label>Вкажіть ваші побажання по алкогольним напоям:</label>
               <div className="radio-group">
-                {['Ром', 'Віскі', 'Вино', 'Шампанське', 'Горілка'].map((drink) => (
+                {[ 'Коньяк', 'Вино', 'Шампанське', 'Горілка'].map((drink) => (
                   <label key={drink}>
                     <input
                       type="checkbox"
@@ -139,7 +139,7 @@ export default function RSVPForm() {
             <div className="form-group">
               <label>Вкажіть ваші побажання по безалкогольним напоям:</label>
               <div className="radio-group">
-                {['Апельсиновий сік', 'Томатний сік', 'Сік Мультивітамін', 'Кола', 'Фанта', 'Мінеральна вода', 'Вода негазована'].map((drink) => (
+                {['Сік', 'Б/А ', 'Солодка вода', 'Мінеральна вода', 'Вода негазована'].map((drink) => (
                   <label key={drink}>
                     <input
                       type="checkbox"

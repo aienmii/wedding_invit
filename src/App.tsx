@@ -44,11 +44,10 @@ export default function App() {
       <section className="section-greeting">
         <h2>Любі Друзі</h2>
         <p>
-          Незабаром у нашому житті відбудеться важлива подія - наше весілля!
-        </p>
+Найважливіший день нашого життя вже скоро🤍        </p>
         <p>
-          Ми віримо та сподіваємося, що цей день стане гарним початком довгого
-          та щасливо життя.
+         Для нас дуже важливо провести цей день поруч з людьми, які займають особливе місце в нашому житті. Тому будемо щиро раді розділити ці емоції та радість разом з вами.
+Чекаємо на вас
         </p>
         <p>Чекаємо на вас</p>
       </section>
@@ -90,17 +89,17 @@ export default function App() {
         <h2>Таймінг</h2>
         <div className="timeline">
           <div className="timeline-item">
-            <div className="timeline-time">12:00</div>
+            <div className="timeline-time">13:00</div>
             <div className="timeline-desc">Збір гостей</div>
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-time">13:00</div>
+            <div className="timeline-time">14:00</div>
             <div className="timeline-desc">Весільна церемонія</div>
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-time">14:00</div>
+            <div className="timeline-time">15:00</div>
             <div className="timeline-desc">Святковий банкет</div>
           </div>
 
@@ -121,9 +120,10 @@ export default function App() {
 
         <div className={`color-palette ${dressCodeVisible ? "show-animation" : ""}`}>
           <div className="color-circle" style={{ backgroundColor: "#E3DAC9" }}></div>
-          <div className="color-circle" style={{ backgroundColor: "#B5B5A6" }}></div>
-          <div className="color-circle" style={{ backgroundColor: "#8F9779" }}></div>
+          <div className="color-circle" style={{ backgroundColor: "#f1c8cb" }}></div>
           <div className="color-circle" style={{ backgroundColor: "#DA9CB9" }}></div>
+          <div className="color-circle" style={{ backgroundColor: "#a4ae96" }}></div>
+          <div className="color-circle" style={{ backgroundColor: "#7e8c69" }}></div>
         </div>
 
         <p style={{ marginTop: "20px" }}>
@@ -134,9 +134,7 @@ export default function App() {
       {/* Details Section */}
       <section className="section">
         <h2>Деталі</h2>
-        <p>
-          Наше свято для дорослих, так як ми не передбачаємо розваги для дітей.
-        </p>
+
         <div className="heart-divider">🤍</div>
         <p>
           Приємним компліментом для нас буде, якщо ви замість квітів вирішите
