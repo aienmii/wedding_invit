@@ -119,7 +119,6 @@ export default function App() {
         </p>
 
         <div className={`color-palette ${dressCodeVisible ? "show-animation" : ""}`}>
-          <div className="color-circle" style={{ backgroundColor: "#E3DAC9" }}></div>
           <div className="color-circle" style={{ backgroundColor: "#f1c8cb" }}></div>
           <div className="color-circle" style={{ backgroundColor: "#DA9CB9" }}></div>
           <div className="color-circle" style={{ backgroundColor: "#a4ae96" }}></div>
