@@ -172,7 +172,7 @@ export default function App() {
 
 
                 <a
-                    href="http://googleusercontent.com/maps.google.com/4"
+                    href="https://www.google.com/maps/place/Venetsiya/@50.1262145,19.9731317,10.59z/data=!4m6!3m5!1s0x473205d4cd34a0a3:0xd946bdb5f1b8d616!8m2!3d49.3933454!4d26.954253!16s%2Fg%2F11b6p8vjk2?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D4"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn"

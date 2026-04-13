@@ -113,14 +113,14 @@ html {
 
 }
 .hero-content h1 {
-  font-family: "Snell Roundhand", cursive;
+  font-family: "Snell Roundhand", cursive,"Cormorant Garamond", serif;
   color:#faebd7;
   opacity: 0.6;
   font-size: 3rem;
 
 }
 .hero-content p {
-  font-family: "URW Chancery L", cursive;
+  font-family: "URW Chancery L", cursive,"Cormorant Garamond", serif;
   color:#faebd7;
   opacity: 0.5;
   font-size: 1.5rem;
@@ -154,7 +154,7 @@ html {
   position: relative;
   top:380px;
   left: 150px;
-  font-family: "Snell Roundhand", cursive;
+  font-family: "Snell Roundhand", cursive,"Cormorant Garamond", serif;
   font-size: 1rem;
   font-weight: 600;
 
@@ -279,7 +279,7 @@ position: absolute;
 
 }
 .timeline-title {
-  font-family: "Georgia", sans-serif;
+  font-family: "Georgia", sans-serif,"Cormorant Garamond", serif;
   font-size: 1.3rem;
   font-weight: 400;
   color: var(--text-color);
@@ -329,7 +329,7 @@ position: absolute;
   color: white;
   padding: 12px 25px;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif,"Cormorant Garamond", serif;
   font-size: 0.9rem;
   border-radius: 25px;
   margin-top: 15px;
@@ -410,7 +410,7 @@ position: absolute;
   }
 
   .tittle {
-    font-family: "Snell Roundhand", cursive;
+    font-family: "Snell Roundhand", cursive,"Cormorant Garamond", serif;
     font-size: 1.5rem;
     font-weight: 600;
     position: relative;
@@ -431,7 +431,7 @@ position: absolute;
   }
 
   .footer h2 {
-    font-family: "Snell Roundhand", cursive;
+    font-family: "Snell Roundhand", cursive,"Cormorant Garamond", serif;
     font-size: 1.5rem;
     margin: 0;
     color: white;
